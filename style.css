@@ -204,10 +204,19 @@ body{
 =========================== */
 
 .hero-imagen{
+
     flex:1;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
+    position:relative;
+
+    min-height:600px;
+
 }
 
 .hero-imagen img{
@@ -536,12 +545,27 @@ button,
 .hero-imagen::before{
 
     content:"";
+
     position:absolute;
-    width:320px;
-    height:320px;
+
+    width:520px;
+
+    height:520px;
+
     border-radius:50%;
-    background:radial-gradient(circle, rgba(0,191,255,.20), transparent 70%);
-    filter:blur(25px);
+
+    background:radial-gradient(
+        circle,
+        rgba(0,191,255,.35) 0%,
+        rgba(0,191,255,.18) 35%,
+        rgba(0,191,255,.08) 60%,
+        transparent 80%
+    );
+
+    filter:blur(45px);
+
+    animation:halo 5s ease-in-out infinite;
+
     z-index:0;
 
 }
@@ -666,29 +690,31 @@ footer strong{
 
 }
 
-/* ===========================
-   POR QUÉ ELEGIR EZORITECH
-=========================== */
+@keyframes halo{
 
-#porque{
+    0%{
 
-    background:#151515;
+        transform:scale(1);
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.8;
+
+    }
 
 }
 
-#porque h2{
-
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:20px;
-
-}
-
-#porque > .contenedor > p{
-
-    text-align:center;
-    color:#cfcfcf;
-    max-width:720px;
-    margin:0 auto 60px;
-
-}
