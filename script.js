@@ -43,13 +43,37 @@ function iniciarIntro(){
    ANIMACIONES
 ====================================== */
 
+/* ======================================
+   ANIMACIONES AL HACER SCROLL
+====================================== */
+
 function iniciarAnimaciones(){
 
-    const tarjetas=document.querySelectorAll(".tarjeta-servicio");
+    const tarjetas = document.querySelectorAll(".tarjeta-servicio");
 
-    tarjetas.forEach((tarjeta,indice)=>{
+    const observador = new IntersectionObserver((entradas)=>{
 
-        tarjeta.style.animationDelay=`${indice*0.15}s`;
+        entradas.forEach((entrada)=>{
+
+            if(entrada.isIntersecting){
+
+                entrada.target.classList.add("activa");
+
+                observador.unobserve(entrada.target);
+
+            }
+
+        });
+
+    },{
+
+        threshold:0.20
+
+    });
+
+    tarjetas.forEach((tarjeta)=>{
+
+        observador.observe(tarjeta);
 
     });
 
