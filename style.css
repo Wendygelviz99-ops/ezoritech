@@ -539,7 +539,15 @@ button,
 =========================== */
 
 .hero-imagen{
+
     position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
 
 .hero-imagen::before{
@@ -565,10 +573,41 @@ button,
 
 }
 
+.hero-imagen::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-40px;
+
+    width:340px;
+
+    height:140px;
+
+    background:
+    radial-gradient(
+        ellipse,
+        rgba(0,191,255,.20),
+        rgba(0,191,255,.08),
+        transparent 75%
+    );
+
+    filter:blur(35px);
+
+    z-index:0;
+
+}
+
 .hero-imagen img{
 
     position:relative;
-    z-index:1;
+
+    z-index:2;
+
+    filter:
+        drop-shadow(0 0 18px rgba(0,191,255,.20))
+        drop-shadow(0 0 35px rgba(0,191,255,.10));
 
 }
 
@@ -709,7 +748,67 @@ footer strong{
 
         opacity:.8;
 
+     
+/* ===========================
+   SR. BÚHO
+=========================== */
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
     }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.hero-imagen img{
+
+    animation:flotar 6s ease-in-out infinite;
+
+}
+    }
+
+}
+
+/* ===========================
+   VIDA DEL SR. BÚHO
+=========================== */
+
+@keyframes respirarLuz{
+
+    0%{
+        filter:
+        drop-shadow(0 0 18px rgba(0,191,255,.18))
+        drop-shadow(0 0 35px rgba(0,191,255,.10));
+    }
+
+    50%{
+        filter:
+        drop-shadow(0 0 26px rgba(0,191,255,.35))
+        drop-shadow(0 0 55px rgba(0,191,255,.18));
+    }
+
+    100%{
+        filter:
+        drop-shadow(0 0 18px rgba(0,191,255,.18))
+        drop-shadow(0 0 35px rgba(0,191,255,.10));
+    }
+
+}
+
+.hero-imagen img{
+
+    animation:
+        flotar 6s ease-in-out infinite,
+        respirarLuz 4.5s ease-in-out infinite;
 
 }
 
