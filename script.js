@@ -6,13 +6,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     iniciarIntro();
-    iniciarTarjetas();
     iniciarBotonSubir();
+    iniciarTarjetas();
 
 });
 
 /* ======================================
-   PANTALLA DE BIENVENIDA
+   INTRO
 ====================================== */
 
 function iniciarIntro() {
@@ -31,6 +31,6 @@ function iniciarIntro() {
 
         }, 800);
 
-    }, 2500);
+    }, 1600);
 
 }
