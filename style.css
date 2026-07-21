@@ -221,7 +221,7 @@ body{
 
 .hero-imagen img{
     width:100%;
-    max-width:480px;
+    max-width:390px;
     border-radius:24px;
     border:2px solid rgba(0,191,255,.25);
     box-shadow:0 20px 50px rgba(0,191,255,.20);
@@ -545,26 +545,21 @@ button,
 .hero-imagen::before{
 
     content:"";
-
     position:absolute;
 
     width:520px;
-
     height:520px;
 
     border-radius:50%;
 
-    background:radial-gradient(
-        circle,
-        rgba(0,191,255,.35) 0%,
-        rgba(0,191,255,.18) 35%,
-        rgba(0,191,255,.08) 60%,
-        transparent 80%
-    );
+    background:
+    radial-gradient(circle,
+    rgba(0,191,255,.35) 0%,
+    rgba(0,191,255,.18) 35%,
+    rgba(0,191,255,.08) 55%,
+    transparent 80%);
 
     filter:blur(45px);
-
-    animation:halo 5s ease-in-out infinite;
 
     z-index:0;
 
