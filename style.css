@@ -113,6 +113,20 @@ body{
 }
 
 /* ===========================
+   OCULTAR INTRO
+=========================== */
+
+#intro.ocultar{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .8s ease, visibility .8s ease;
+
+}
+
+/* ===========================
    CONTENIDO PRINCIPAL
 =========================== */
 
