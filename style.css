@@ -269,18 +269,43 @@ body{
 }
 
 .tarjeta-servicio{
-    background:#202020;
-    border:1px solid rgba(0,191,255,.12);
-    border-radius:22px;
-    padding:35px 28px;
-    transition:.35s;
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(34,34,34,.96),
+            rgba(22,22,22,.98)
+        );
+
+    border:1px solid rgba(0,191,255,.15);
+
+    border-radius:26px;
+
+    padding:38px 30px;
+
+    min-height:270px;
+
+    transition:all .45s ease;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.30);
+
 }
 
 .tarjeta-servicio:hover{
-    transform:translateY(-10px);
-    border-color:#00bfff;
-    box-shadow:0 25px 50px rgba(0,191,255,.22);
+
+    transform:translateY(-12px) scale(1.02);
+
+    border-color:rgba(0,191,255,.65);
+
+    box-shadow:
+        0 25px 60px rgba(0,191,255,.18),
+        0 0 35px rgba(0,191,255,.10);
+
 }
 
 .tarjeta-servicio h3{
