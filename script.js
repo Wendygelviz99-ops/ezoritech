@@ -740,3 +740,33 @@ console.log("Versión 1.0");
 console.log("Proyecto listo para revisión.");
 
 console.log("================================");
+
+/* ===========================
+   APARICIÓN DE TARJETAS
+=========================== */
+
+const tarjetas = document.querySelectorAll(".tarjeta-servicio");
+
+const observador = new IntersectionObserver((entradas) => {
+
+    entradas.forEach((entrada) => {
+
+        if (entrada.isIntersecting) {
+
+            entrada.target.classList.add("activa");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.25
+
+});
+
+tarjetas.forEach((tarjeta) => {
+
+    observador.observe(tarjeta);
+
+});
