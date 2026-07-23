@@ -90,7 +90,7 @@ function iniciarTarjetas() {
 
             if (entrada.isIntersecting) {
 
-                entrada.target.classList.add("visible");
+               entrada.target.classList.add("activa");
 
                 observador.unobserve(entrada.target);
 
