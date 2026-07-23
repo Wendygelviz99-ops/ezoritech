@@ -1,57 +1,12 @@
- /* ==========================
-   EZORITECH - STYLE.CSS
-========================== */
+/* ======================================
+   EZORITECH
+   STYLE.CSS
+   Versión 2.0
+====================================== */
 
-/* Reinicio básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Variables de color */
-:root{
-    --negro:#0f0f0f;
-    --gris:#1d1d1d;
-    --gris-claro:#2d2d2d;
-    --blanco:#ffffff;
-    --azul:#00bfff;
-    --azul-hover:#00d8ff;
-    --texto:#dcdcdc;
-}
-
-/* Configuración general */
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--negro);
-    color: var(--blanco);
-    line-height:1.6;
-    overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.contenedor{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ===========================
-   ESTILOS GENERALES
-=========================== */
+/* ======================================
+   RESET
+====================================== */
 
 *{
     margin:0;
@@ -71,50 +26,71 @@ body{
     line-height:1.6;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
 .contenedor{
     width:90%;
     max-width:1200px;
     margin:auto;
 }
 
-/* ===========================
+/* ======================================
+   COLORES
+====================================== */
+
+:root{
+
+    --negro:#111111;
+
+    --gris:#1d1d1d;
+
+    --gris-claro:#262626;
+
+    --texto:#d5d5d5;
+
+    --azul:#00bfff;
+
+    --azul-claro:#00d8ff;
+
+    --borde:rgba(0,191,255,.15);
+
+}
+
+/* ======================================
    PANTALLA DE BIENVENIDA
-=========================== */
+====================================== */
 
 #intro{
+
     position:fixed;
+
     inset:0;
+
     background:#0f0f0f;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
     z-index:9999;
-}
 
-.intro-logo{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#00bfff,#0077ff);
-    box-shadow:0 0 35px rgba(0,191,255,.45);
-    margin-bottom:25px;
 }
-
-#intro h1{
-    font-size:2.4rem;
-    letter-spacing:2px;
-    margin-bottom:12px;
-}
-
-#intro p{
-    color:#cfcfcf;
-    font-size:1.05rem;
-}
-
-/* ===========================
-   OCULTAR INTRO
-=========================== */
 
 #intro.ocultar{
 
@@ -122,100 +98,242 @@ body{
 
     visibility:hidden;
 
-    transition:opacity .8s ease, visibility .8s ease;
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
 
 }
 
-/* ===========================
-   CONTENIDO PRINCIPAL
-=========================== */
+.intro-logo{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #00bfff,
+        #0077ff
+    );
+
+    box-shadow:
+        0 0 35px rgba(0,191,255,.45);
+
+    margin-bottom:25px;
+
+}
+
+#intro h1{
+
+    font-size:2.4rem;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+}
+
+#intro p{
+
+    color:#cfcfcf;
+
+    font-size:1.05rem;
+
+}
+
+/* ======================================
+   HERO
+====================================== */
 
 #contenido{
+
     min-height:100vh;
+
 }
 
 #hero{
+
     width:100%;
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    padding:90px 8%;
+
     gap:60px;
-    background:linear-gradient(180deg,#111111 0%, #191919 100%);
+
+    padding:90px 8%;
+
+    background:linear-gradient(
+        180deg,
+        #111111 0%,
+        #191919 100%
+    );
+
 }
 
 .hero-contenido{
+
     flex:1;
+
     max-width:650px;
+
 }
 
 .hero-etiqueta{
+
     display:inline-block;
+
     padding:10px 18px;
+
     border:1px solid rgba(0,191,255,.35);
+
     border-radius:999px;
-    color:#00bfff;
-    margin-bottom:24px;
-    font-size:.95rem;
+
     background:rgba(0,191,255,.08);
+
+    color:#00bfff;
+
+    margin-bottom:24px;
+
+    font-size:.95rem;
+
+    backdrop-filter:blur(12px);
+
 }
 
 .hero-contenido h2{
+
     font-size:3.3rem;
+
     line-height:1.1;
+
     margin-bottom:25px;
+
+    text-shadow:0 0 18px rgba(0,191,255,.15);
+
 }
 
-.hero-contenido p{
-    color:#d0d0d0;
-    font-size:1.1rem;
-    margin-bottom:35px;
+.hero-beneficios{
+
+    list-style:none;
+
+    margin:30px 0;
+
+    padding:0;
+
 }
 
-/* ===========================
-   BOTONES PRINCIPALES
-=========================== */
+.hero-beneficios li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:14px 0;
+
+    color:#dcdcdc;
+
+    font-size:1.05rem;
+
+}
 
 .hero-acciones{
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:18px;
+
     margin-top:20px;
+
 }
 
+/* ======================================
+   BOTONES
+====================================== */
+
 .btn-principal{
+
     background:#00bfff;
+
     color:#ffffff;
+
     padding:15px 28px;
+
+    border:none;
+
     border-radius:12px;
+
     font-weight:700;
-    transition:.3s;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
     box-shadow:0 10px 30px rgba(0,191,255,.35);
+
 }
 
 .btn-principal:hover{
-    transform:translateY(-3px);
+
     background:#00d8ff;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-principal:active{
+
+    transform:scale(.97);
+
 }
 
 .btn-secundario{
-    border:2px solid #00bfff;
+
+    background:transparent;
+
     color:#00bfff;
+
     padding:15px 28px;
+
+    border:2px solid #00bfff;
+
     border-radius:12px;
+
     font-weight:700;
-    transition:.3s;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
 }
 
 .btn-secundario:hover{
+
     background:#00bfff;
+
     color:#111111;
+
 }
 
-/* ===========================
-   IMAGEN PRINCIPAL (HERO)
-=========================== */
+.btn-secundario:active{
+
+    transform:scale(.97);
+
+}
+
+/* ======================================
+   SR. BÚHO
+====================================== */
 
 .hero-imagen{
 
@@ -233,383 +351,31 @@ body{
 
 }
 
-.hero-imagen img{
-    width:100%;
-    max-width:390px;
-    border-radius:24px;
-    border:2px solid rgba(0,191,255,.25);
-    box-shadow:0 20px 50px rgba(0,191,255,.20);
-    transition:.4s;
-}
-
-.hero-imagen img:hover{
-    transform:scale(1.03);
-    box-shadow:0 25px 60px rgba(0,191,255,.35);
-}
-
-/* ===========================
-   SECCIÓN SERVICIOS
-=========================== */
-
-#servicios{
-    padding:100px 8%;
-    background:#181818;
-}
-
-#servicios h2{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:18px;
-}
-
-#servicios>div>p{
-    text-align:center;
-    color:#cfcfcf;
-    margin-bottom:60px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-/* ===========================
-   TARJETAS DE SERVICIOS
-=========================== */
-
-.tarjetas-servicios{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:60px;
-}
-
-.tarjeta-servicio{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(34,34,34,.96),
-            rgba(22,22,22,.98)
-        );
-
-    border:1px solid rgba(0,191,255,.15);
-
-    border-radius:26px;
-
-    padding:38px 30px;
-
-    min-height:270px;
-
-    transition:all .45s ease;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.30);
-
- opacity:0;
-
-transform:translateY(50px);
-
-transition:all .8s ease;
-
-}
-
-.tarjeta-servicio:hover{
-
-    transform:translateY(-12px) scale(1.02);
-
-    border-color:rgba(0,191,255,.65);
-
-    box-shadow:
-        0 25px 60px rgba(0,191,255,.18),
-        0 0 35px rgba(0,191,255,.10);
-
-}
-
-.tarjeta-servicio h3{
-    color:#00bfff;
-    margin-bottom:18px;
-    font-size:1.3rem;
-}
-
-.tarjeta-servicio p{
-    color:#d8d8d8;
-    font-size:.98rem;
-
-/* ===========================
-   PIE DE SECCIÓN
-=========================== */
-
-section{
-    position:relative;
-}
-
-section::after{
-    content:"";
-    display:block;
-    width:90px;
-    height:4px;
-    background:#00bfff;
-    margin:60px auto 0;
-    border-radius:20px;
-    opacity:.4;
-}
-
-/* ===========================
-   ANIMACIONES SUAVES
-=========================== */
-
-@keyframes aparecer{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-.hero-contenido,
-.hero-imagen,
-.tarjeta-servicio{
-
-    animation:aparecer .8s ease both;
-
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width:900px){
-
-    #hero{
-
-        flex-direction:column;
-        text-align:center;
-        padding:70px 25px;
-
-    }
-
-    .hero-contenido h2{
-
-        font-size:2.4rem;
-
-    }
-
-    .hero-acciones{
-
-        justify-content:center;
-
-    }
-
-    .hero-imagen{
-
-        margin-top:40px;
-
-    }
-
-}
-
-/* ===========================
-   EFECTOS DE BOTONES
-=========================== */
-
-.btn-principal,
-.btn-secundario{
-
-    cursor:pointer;
-
-}
-
-.btn-principal:active,
-.btn-secundario:active{
-
-    transform:scale(.97);
-
-}
-
-.tarjeta-servicio{
-
-    overflow:hidden;
-    position:relative;
-
-}
-
-.tarjeta-servicio::before{
-
-    content:"";
-    position:absolute;
-    top:0;
-    left:-120%;
-    width:120%;
-    height:100%;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.08),
-        transparent
-    );
-    transition:.7s;
-
-}
-
-.tarjeta-servicio:hover::before{
-
-    left:120%;
-
-}
-
-/* ===========================
-   ESPACIADOS GENERALES
-=========================== */
-
-section{
-
-    padding-top:90px;
-    padding-bottom:90px;
-
-}
-
-h1,
-h2,
-h3{
-
-    font-weight:700;
-
-}
-
-p{
-
-    line-height:1.8;
-
-}
-
-/* ===========================
-   EFECTOS DE ILUMINACIÓN
-=========================== */
-
-.hero-contenido h2{
-
-    text-shadow:0 0 18px rgba(0,191,255,.15);
-
-}
-
-.hero-etiqueta{
-
-    backdrop-filter:blur(12px);
-
-}
-
-.tarjeta-servicio{
-
-    backdrop-filter:blur(10px);
-
-}
-
-.tarjeta-servicio:hover{
-
-    background:#252525;
-
-}
-
-#porque .tarjetas-servicios{
-
-    margin-top:20px;
-
-}
-
-#porque .tarjeta-servicio{
-
-    min-height:220px;
-
-}
-
-#servicios{
-
-    position:relative;
-
-}
-
-/* ===========================
-   TRANSICIONES GENERALES
-=========================== */
-
-a,
-button,
-.tarjeta-servicio,
-.hero-imagen img{
-
-    transition:all .35s ease;
-
-}
-
-::selection{
-
-    background:#00bfff;
-    color:#ffffff;
-
-}
-
-/* ===========================
-   SCROLL PERSONALIZADO
-=========================== */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#151515;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#00bfff;
-    border-radius:20px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#00d8ff;
-}
-
-/* ===========================
-   EFECTOS VISUALES
-=========================== */
-
-.hero-imagen{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
 .hero-imagen::before{
 
     content:"";
+
     position:absolute;
 
     width:520px;
+
     height:520px;
 
     border-radius:50%;
 
-    background:
-    radial-gradient(circle,
-    rgba(0,191,255,.35) 0%,
-    rgba(0,191,255,.18) 35%,
-    rgba(0,191,255,.08) 55%,
-    transparent 80%);
+    background:radial-gradient(
+
+        circle,
+
+        rgba(0,191,255,.35) 0%,
+
+        rgba(0,191,255,.18) 35%,
+
+        rgba(0,191,255,.08) 55%,
+
+        transparent 80%
+
+    );
 
     filter:blur(45px);
 
@@ -629,12 +395,16 @@ button,
 
     height:140px;
 
-    background:
-    radial-gradient(
+    background:radial-gradient(
+
         ellipse,
+
         rgba(0,191,255,.20),
+
         rgba(0,191,255,.08),
+
         transparent 75%
+
     );
 
     filter:blur(35px);
@@ -649,239 +419,97 @@ button,
 
     z-index:2;
 
-    filter:
-        drop-shadow(0 0 18px rgba(0,191,255,.20))
-        drop-shadow(0 0 35px rgba(0,191,255,.10));
+    width:100%;
 
-}
+    max-width:390px;
 
-/* ===========================
-   AJUSTES PARA MÓVILES
-=========================== */
+    border-radius:24px;
 
-@media (max-width:768px){
+    border:2px solid rgba(0,191,255,.25);
 
-    #hero{
-
-        padding:60px 25px;
-
-    }
-
-    .hero-contenido h2{
-
-        font-size:2rem;
-
-    }
-
-    .hero-contenido p{
-
-        font-size:1rem;
-
-    }
-
-    .hero-etiqueta{
-
-        font-size:.85rem;
-
-    }
-
-    .tarjetas-servicios{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .btn-principal,
-    .btn-secundario{
-
-        width:100%;
-        text-align:center;
-
-    }
-
-}
-
-/* ===========================
-   AJUSTES PARA TABLETS
-=========================== */
-
-@media (min-width:769px) and (max-width:1100px){
-
-    .hero-contenido h2{
-
-        font-size:2.8rem;
-
-    }
-
-    .tarjetas-servicios{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-/* ===========================
-   FINAL DEL ARCHIVO
-=========================== */
-
-footer{
-
-    padding:60px 20px;
-
-    text-align:center;
-
-    background:#101010;
-
-    color:#bfbfbf;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-footer strong{
-
-    color:#00bfff;
-
-}
-
-/* ===========================
-   BENEFICIOS DEL HERO
-=========================== */
-
-.hero-beneficios{
-
-    list-style:none;
-    margin:30px 0;
-    padding:0;
-
-}
-
-.hero-beneficios li{
-
-    margin:14px 0;
-    color:#dcdcdc;
-    font-size:1.05rem;
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-}
-
-@keyframes halo{
-
-    0%{
-
-        transform:scale(1);
-
-        opacity:.8;
-
-    }
-
-    50%{
-
-        transform:scale(1.08);
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:scale(1);
-
-        opacity:.8;
-
-     
-/* ===========================
-   SR. BÚHO
-=========================== */
-
-@keyframes flotar{
-
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-8px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-
-}
-
-.hero-imagen img{
-
-    animation:flotar 6s ease-in-out infinite;
-
-}
-    }
-
-}
-
-/* ===========================
-   VIDA DEL SR. BÚHO
-=========================== */
-
-@keyframes respirarLuz{
-
-    0%{
-        filter:
-        drop-shadow(0 0 18px rgba(0,191,255,.18))
-        drop-shadow(0 0 35px rgba(0,191,255,.10));
-    }
-
-    50%{
-        filter:
-        drop-shadow(0 0 26px rgba(0,191,255,.35))
-        drop-shadow(0 0 55px rgba(0,191,255,.18));
-    }
-
-    100%{
-        filter:
-        drop-shadow(0 0 18px rgba(0,191,255,.18))
-        drop-shadow(0 0 35px rgba(0,191,255,.10));
-    }
-
-}
-
-.hero-imagen img{
+    box-shadow:0 20px 50px rgba(0,191,255,.20);
 
     animation:
+
         flotar 6s ease-in-out infinite,
+
         respirarLuz 4.5s ease-in-out infinite;
 
 }
 
-/* ===========================
-   TARJETAS ACTIVAS
-=========================== */
+/* ======================================
+   ANIMACIONES DEL BÚHO
+====================================== */
 
-.tarjeta-servicio.activa{
+@keyframes flotar{
 
-    opacity:1;
+    0%{
 
-    transform:translateY(0);
+        transform:translateY(0);
 
-    box-shadow:
-        0 20px 50px rgba(0,191,255,.18);
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
 
 }
 
-/* ===========================
-   GALERÍA ANTES Y DESPUÉS
-=========================== */
+@keyframes respirarLuz{
 
-#galeria{
+    0%{
 
-    background:#141414;
+        filter:
+
+        drop-shadow(0 0 18px rgba(0,191,255,.18))
+
+        drop-shadow(0 0 35px rgba(0,191,255,.10));
+
+    }
+
+    50%{
+
+        filter:
+
+        drop-shadow(0 0 26px rgba(0,191,255,.35))
+
+        drop-shadow(0 0 55px rgba(0,191,255,.18));
+
+    }
+
+    100%{
+
+        filter:
+
+        drop-shadow(0 0 18px rgba(0,191,255,.18))
+
+        drop-shadow(0 0 35px rgba(0,191,255,.10));
+
+    }
 
 }
 
-#galeria h2{
+/* ======================================
+   SERVICIOS
+====================================== */
+
+#servicios{
+
+    padding:100px 8%;
+
+    background:#181818;
+
+}
+
+#servicios h2{
 
     text-align:center;
 
@@ -891,7 +519,7 @@ footer strong{
 
 }
 
-#galeria > .contenedor > p{
+#servicios > .contenedor > p{
 
     text-align:center;
 
@@ -903,112 +531,136 @@ footer strong{
 
 }
 
-.galeria-trabajos{
+/* ======================================
+   TARJETAS
+====================================== */
 
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.trabajo{
-
-    width:100%;
-
-    max-width:950px;
-
-    background:#1d1d1d;
-
-    border-radius:26px;
-
-    border:1px solid rgba(0,191,255,.15);
-
-    padding:35px;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
-
-}
-
-.trabajo-imagenes{
+.tarjetas-servicios{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-    gap:25px;
+    gap:30px;
 
-    margin-bottom:30px;
+    margin-top:60px;
 
 }
 
-.trabajo-imagenes div{
+.tarjeta-servicio{
 
-    background:#262626;
-
-    border-radius:18px;
+    position:relative;
 
     overflow:hidden;
 
-    border:1px solid rgba(255,255,255,.05);
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(34,34,34,.96),
+
+        rgba(22,22,22,.98)
+
+    );
+
+    border:1px solid rgba(0,191,255,.15);
+
+    border-radius:26px;
+
+    padding:38px 30px;
+
+    min-height:270px;
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:
+
+        opacity .8s ease,
+
+        transform .8s ease,
+
+        box-shadow .4s ease,
+
+        border-color .4s ease;
 
 }
 
-.trabajo-imagenes span{
+.tarjeta-servicio.visible{
 
-    display:block;
+    opacity:1;
 
-    background:#00bfff;
-
-    color:white;
-
-    text-align:center;
-
-    font-weight:bold;
-
-    padding:12px;
-
-    letter-spacing:1px;
+    transform:translateY(0);
 
 }
 
-.trabajo-imagenes img{
+.tarjeta-servicio:hover{
 
-    width:100%;
+    transform:translateY(-12px) scale(1.02);
 
-    aspect-ratio:1/1;
+    border-color:rgba(0,191,255,.65);
 
-    object-fit:cover;
+    background:#252525;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,191,255,.18),
+
+        0 0 35px rgba(0,191,255,.10);
 
 }
 
-.trabajo-info{
+.tarjeta-servicio::before{
 
-    text-align:center;
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:120%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transition:.7s;
 
 }
 
-.trabajo-info h3{
+.tarjeta-servicio:hover::before{
+
+    left:120%;
+
+}
+
+.tarjeta-servicio h3{
 
     color:#00bfff;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
-    font-size:1.5rem;
-
-}
-
-.trabajo-info p{
-
-    color:#d5d5d5;
+    font-size:1.3rem;
 
 }
 
-@media(max-width:768px){
+.tarjeta-servicio p{
 
-    .trabajo-imagenes{
+    color:#d8d8d8;
 
-        grid-template-columns:1fr;
-
-    }
+    font-size:.98rem;
 
 }
