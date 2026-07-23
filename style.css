@@ -871,3 +871,144 @@ footer strong{
 
 }
 
+/* ===========================
+   GALERÍA ANTES Y DESPUÉS
+=========================== */
+
+#galeria{
+
+    background:#141414;
+
+}
+
+#galeria h2{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:18px;
+
+}
+
+#galeria > .contenedor > p{
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+}
+
+.galeria-trabajos{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.trabajo{
+
+    width:100%;
+
+    max-width:950px;
+
+    background:#1d1d1d;
+
+    border-radius:26px;
+
+    border:1px solid rgba(0,191,255,.15);
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.trabajo-imagenes{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.trabajo-imagenes div{
+
+    background:#262626;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+.trabajo-imagenes span{
+
+    display:block;
+
+    background:#00bfff;
+
+    color:white;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    padding:12px;
+
+    letter-spacing:1px;
+
+}
+
+.trabajo-imagenes img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+}
+
+.trabajo-info{
+
+    text-align:center;
+
+}
+
+.trabajo-info h3{
+
+    color:#00bfff;
+
+    margin-bottom:15px;
+
+    font-size:1.5rem;
+
+}
+
+.trabajo-info p{
+
+    color:#d5d5d5;
+
+}
+
+@media(max-width:768px){
+
+    .trabajo-imagenes{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
