@@ -337,19 +337,6 @@ transition:all .8s ease;
 .tarjeta-servicio p{
     color:#d8d8d8;
     font-size:.98rem;
-}
-
-/* ===========================
-   TARJETAS VISIBLES
-=========================== */
-
-.tarjeta-servicio.visible{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
 
 /* ===========================
    PIE DE SECCIÓN
