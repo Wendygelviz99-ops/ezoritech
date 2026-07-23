@@ -340,6 +340,18 @@ transition:all .8s ease;
 }
 
 /* ===========================
+   TARJETAS VISIBLES
+=========================== */
+
+.tarjeta-servicio.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
    PIE DE SECCIÓN
 =========================== */
 
