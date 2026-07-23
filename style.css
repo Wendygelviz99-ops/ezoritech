@@ -573,9 +573,9 @@ button{
 
     min-height:270px;
 
-    opacity:0;
+    opacity:1;
 
-    transform:translateY(50px);
+transform:translateY(0);
 
     transition:
 
