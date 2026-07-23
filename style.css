@@ -664,3 +664,215 @@ button{
     font-size:.98rem;
 
 }
+
+/* ======================================
+   PROCESO DE TRABAJO
+====================================== */
+
+#proceso{
+
+    padding:100px 8%;
+
+    background:#141414;
+
+}
+
+#proceso h2{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:18px;
+
+}
+
+#proceso > .contenedor > p{
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+}
+
+#proceso .tarjetas-servicios{
+
+    margin-top:40px;
+
+}
+
+#proceso .tarjeta-servicio{
+
+    min-height:220px;
+
+}
+
+/* ======================================
+   CONTACTO
+====================================== */
+
+#contacto{
+
+    padding:100px 8%;
+
+    background:#181818;
+
+}
+
+#contacto h2{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:18px;
+
+}
+
+#contacto .contenedor > p{
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+}
+
+#contacto .hero-acciones{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:30px;
+
+}
+
+#contacto .btn-principal{
+
+    min-width:320px;
+
+}
+
+/* ======================================
+   GALERÍA ANTES Y DESPUÉS
+====================================== */
+
+#galeria{
+
+    padding:100px 8%;
+
+    background:#141414;
+
+}
+
+#galeria h2{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:18px;
+
+}
+
+#galeria > .contenedor > p{
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    max-width:750px;
+
+    margin:0 auto 60px;
+
+}
+
+.galeria-item{
+
+    background:#1b1b1b;
+
+    border:1px solid rgba(0,191,255,.15);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    margin-bottom:40px;
+
+}
+
+.galeria-imagenes{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.galeria-imagenes div{
+
+    text-align:center;
+
+}
+
+.galeria-imagenes span{
+
+    display:block;
+
+    color:#00bfff;
+
+    font-weight:bold;
+
+    margin-bottom:12px;
+
+}
+
+.galeria-imagenes img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    border:2px solid rgba(0,191,255,.15);
+
+    transition:.35s;
+
+}
+
+.galeria-imagenes img:hover{
+
+    transform:scale(1.03);
+
+    border-color:#00bfff;
+
+    box-shadow:0 15px 35px rgba(0,191,255,.20);
+
+}
+
+.galeria-item h3{
+
+    color:#ffffff;
+
+    margin-bottom:12px;
+
+    font-size:1.7rem;
+
+}
+
+.galeria-item p{
+
+    color:#d8d8d8;
+
+}
