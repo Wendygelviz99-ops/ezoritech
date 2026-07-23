@@ -100,7 +100,7 @@ function iniciarTarjetas() {
 
     }, {
 
-        threshold: 0.20
+        threshold: 0
 
     });
 
