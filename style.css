@@ -1,3 +1,5 @@
+
+
 /* ======================================
    EZORITECH
    STYLE.CSS
@@ -876,3 +878,273 @@ button{
     color:#d8d8d8;
 
 }
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    background:#101010;
+
+    color:#bfbfbf;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h3{
+
+    color:#00bfff;
+
+    margin-bottom:12px;
+
+    font-size:2rem;
+
+}
+
+footer p{
+
+    margin:10px 0;
+
+}
+
+/* ======================================
+   BOTÓN SUBIR
+====================================== */
+
+#btnSubir{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.4rem;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#btnSubir.mostrar{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ======================================
+   ESPACIADO GENERAL
+====================================== */
+
+section{
+
+    position:relative;
+
+    padding-top:90px;
+
+    padding-bottom:90px;
+
+}
+
+section::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:60px auto 0;
+
+    background:#00bfff;
+
+    border-radius:20px;
+
+    opacity:.35;
+
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width:900px){
+
+    #hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:70px 25px;
+
+    }
+
+    .hero-contenido h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero-acciones{
+
+        justify-content:center;
+
+    }
+
+    .hero-imagen{
+
+        margin-top:40px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .tarjetas-servicios{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .btn-principal,
+
+    .btn-secundario{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .hero-contenido h2{
+
+        font-size:2rem;
+
+    }
+
+    .hero-beneficios li{
+
+        font-size:1rem;
+
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1100px){
+
+    .tarjetas-servicios{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ======================================
+   EFECTOS GLOBALES
+====================================== */
+
+a,
+button,
+.hero-imagen img,
+.tarjeta-servicio,
+.galeria-imagenes img{
+
+    transition:all .35s ease;
+
+}
+
+::selection{
+
+    background:#00bfff;
+
+    color:#ffffff;
+
+}
+
+/* ======================================
+   SCROLL PERSONALIZADO
+====================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#151515;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00bfff;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00d8ff;
+
+}
+
+/* ======================================
+   PEQUEÑOS AJUSTES
+====================================== */
+
+h1,
+h2,
+h3{
+
+    font-weight:700;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
+
+img{
+
+    user-select:none;
+
+}
+
+/* ======================================
+   FIN DEL ARCHIVO
+====================================== */
