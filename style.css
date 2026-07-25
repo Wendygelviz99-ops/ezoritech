@@ -1282,7 +1282,25 @@ img{
 
 }
 
-.slider-android{
+.slide-android{
+
+    scroll-snap-align:start;
+
+    flex:0 0 340px;
+
+    background:#222;
+
+    border:1px solid rgba(0,191,255,.18);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.28);
+
+}
 
     display:flex;
 
