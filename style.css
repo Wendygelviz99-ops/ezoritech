@@ -1499,4 +1499,73 @@ img{
 
     line-height:1.7;
 
+   /* ===========================
+   SECCIÓN FINANCIACIÓN
+=========================== */
+
+.financiacion{
+    padding:70px 20px;
+    text-align:center;
+    background:linear-gradient(180deg,#0d0d0d,#161616);
+    border-top:1px solid rgba(255,215,0,.15);
+    border-bottom:1px solid rgba(255,215,0,.15);
+}
+
+.financiacion h2{
+    color:#FFD54A;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.financiacion p{
+    color:#EAEAEA;
+    max-width:750px;
+    margin:0 auto 25px;
+    line-height:1.7;
+}
+
+.logos-financiacion{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+    margin:35px 0;
+}
+
+.logos-financiacion img{
+    max-height:70px;
+    max-width:220px;
+    object-fit:contain;
+    background:white;
+    padding:12px;
+    border-radius:15px;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(255,215,0,.12);
+}
+
+.logos-financiacion img:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 30px rgba(255,215,0,.28);
+}
+
+.lista-financiacion{
+    list-style:none;
+    padding:0;
+    margin:30px auto;
+    color:white;
+    max-width:420px;
+}
+
+.lista-financiacion li{
+    padding:10px 0;
+    font-size:1.05rem;
+}
+
+.texto-financiacion{
+    color:#FFD54A;
+    font-weight:bold;
+    margin-top:20px;
+}
+
 }
