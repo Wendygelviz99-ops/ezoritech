@@ -1617,3 +1617,20 @@ img{
     box-shadow:0 0 35px rgba(255,213,74,.45);
 
 }
+.titulo-financiacion{
+
+    color:#FFD54A;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    margin-top:25px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+    line-height:1.6;
+
+}
