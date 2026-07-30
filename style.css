@@ -1504,93 +1504,178 @@ img{
 =========================== */
 
 .financiacion{
-    padding:70px 20px;
-    text-align:center;
+
+    padding:80px 20px;
+
     background:linear-gradient(180deg,#0d0d0d,#161616);
-    border-top:1px solid rgba(255,215,0,.15);
-    border-bottom:1px solid rgba(255,215,0,.15);
+
+    border-top:1px solid rgba(255,213,74,.12);
+
+    border-bottom:1px solid rgba(255,213,74,.12);
+
+    text-align:center;
+
 }
 
 .financiacion h2{
+
     color:#FFD54A;
+
     font-size:2rem;
-    margin-bottom:15px;
+
+    margin-bottom:20px;
+
 }
 
-.financiacion p{
-    color:#EAEAEA;
-    max-width:750px;
-    margin:0 auto 25px;
+.intro-financiacion{
+
+    color:#F3F3F3;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
     line-height:1.7;
-}
 
-.logos-financiacion{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:30px;
-    margin:40px 0;
+    font-size:1.08rem;
 
 }
 
-.logos-financiacion img{
-    width:220px;
-    max-width:90%;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+.servicios-financiacion{
 
-    border:1px solid rgba(255,215,0,.25);
+    margin-bottom:45px;
 
-    border-radius:22px;
-
-    padding:22px;
-
-    box-shadow:
-        0 0 15px rgba(255,215,0,.12),
-        inset 0 0 12px rgba(255,255,255,.05);
-
-    transition:.35s ease;
 }
 
-.logos-financiacion img:hover{
+.servicios-financiacion h3{
 
-    transform:translateY(-4px) scale(1.03);
+    color:white;
 
-    box-shadow:
-        0 0 30px rgba(255,215,0,.30),
-        0 0 60px rgba(255,215,0,.10);
+    margin-bottom:20px;
 
-    border-color:#FFD54A;
+    font-size:1.25rem;
 
 }
 
 .lista-financiacion{
+
     list-style:none;
+
     padding:0;
-    margin:30px auto;
-    color:white;
-    max-width:420px;
+
+    margin:0 auto;
+
+    max-width:320px;
+
 }
 
 .lista-financiacion li{
+
+    color:white;
+
     padding:10px 0;
-    font-size:1.05rem;
+
+    font-size:1.08rem;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
-.texto-financiacion{
+   .logos-financiacion{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin:45px 0;
+
+}
+
+.tarjeta-financiacion{
+
+    width:260px;
+
+    padding:22px 20px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,213,74,.18);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 0 18px rgba(50,120,255,.10);
+
+    transition:all .35s ease;
+
+}
+
+.tarjeta-financiacion:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#FFD54A;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.45),
+        0 0 25px rgba(255,213,74,.18);
+
+}
+
+.tarjeta-financiacion img{
+
+    width:120px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 18px;
+
+}
+
+.tarjeta-financiacion h4{
+
     color:#FFD54A;
-    font-weight:bold;
-    margin-top:20px;
+
+    font-size:1.15rem;
+
+    margin-bottom:10px;
+
 }
 
-.btn-financiacion{
+.tarjeta-financiacion p{
+
+    color:#F1F1F1;
+
+    font-size:.95rem;
+
+    line-height:1.5;
+
+    margin:0;
+
+}
+
+   .btn-financiacion{
+
+    position:relative;
+
+    overflow:hidden;
 
     display:inline-block;
 
-    margin-top:25px;
+    margin-top:35px;
 
-    padding:15px 35px;
+    padding:16px 38px;
 
     border-radius:50px;
 
@@ -1598,37 +1683,224 @@ img{
 
     color:#111;
 
-    font-weight:bold;
+    font-weight:700;
+
+    font-size:1rem;
 
     text-decoration:none;
 
-    transition:.35s ease;
+    box-shadow:0 0 15px rgba(255,213,74,.25);
 
-    box-shadow:0 0 20px rgba(255,213,74,.25);
+    transition:all .35s ease;
+
+    animation:respirar 4.5s ease-in-out infinite;
+
+}
+
+.btn-financiacion::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-140%;
+
+    width:55%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.65),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:destello 10s linear infinite;
 
 }
 
 .btn-financiacion:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 
-    box-shadow:0 0 35px rgba(255,213,74,.45);
+    box-shadow:
+        0 0 22px rgba(255,213,74,.55),
+        0 0 45px rgba(255,213,74,.25);
 
 }
-.titulo-financiacion{
+
+@keyframes respirar{
+
+    0%{
+
+        box-shadow:0 0 10px rgba(255,213,74,.18);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 22px rgba(255,213,74,.55),
+            0 0 42px rgba(255,213,74,.18);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 10px rgba(255,213,74,.18);
+
+    }
+
+}
+
+@keyframes destello{
+
+    0%{
+
+        left:-140%;
+
+    }
+
+    100%{
+
+        left:180%;
+
+    }
+
+}
+
+.texto-financiacion{
+
+    margin-top:22px;
 
     color:#FFD54A;
 
-    font-size:1.25rem;
+    font-weight:600;
 
-    font-weight:700;
+    font-size:.95rem;
 
-    margin-top:25px;
+}
 
-    margin-bottom:35px;
+   /* ===========================
+   EFECTO PREMIUM TARJETAS
+=========================== */
 
-    text-align:center;
+.tarjeta-financiacion{
 
-    line-height:1.6;
+    position:relative;
+
+    overflow:hidden;
+
+    animation:respirarTarjeta 6s ease-in-out infinite;
+
+}
+
+.tarjeta-financiacion::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(255,255,255,.10),
+        transparent 65%);
+
+    pointer-events:none;
+
+}
+
+.tarjeta-financiacion::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:180%;
+
+    height:220%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+    transform:rotate(15deg);
+
+    animation:destelloTarjeta 12s linear infinite;
+
+}
+
+@keyframes respirarTarjeta{
+
+    0%{
+
+        box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 0 12px rgba(45,140,255,.08);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 10px 35px rgba(0,0,0,.45),
+        0 0 22px rgba(45,140,255,.18);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 0 12px rgba(45,140,255,.08);
+
+    }
+
+}
+
+@keyframes destelloTarjeta{
+
+    0%{
+
+        transform:
+        translateX(-220%) rotate(15deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(220%) rotate(15deg);
+
+    }
+
+}
+
+.tarjeta-financiacion:hover{
+
+    transform:
+        translateY(-6px)
+        scale(1.02);
 
 }
