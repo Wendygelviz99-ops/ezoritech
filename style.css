@@ -392,10 +392,8 @@ button{
     animation:haloBuho 6s ease-in-out infinite;
 
 }
-
-
 /* ======================================
-   NEBLINA AZUL
+   NEBLINA AZUL — MÁS VISIBLE
 ====================================== */
 
 .hero-imagen::after{
@@ -404,47 +402,47 @@ button{
 
     position:absolute;
 
-    width:520px;
+    width:430px;
 
-    height:230px;
-
-    bottom:0;
+    height:210px;
 
     left:50%;
+
+    bottom:-15px;
 
     transform:translateX(-50%);
 
     background:
 
         radial-gradient(
-            ellipse at 30% 60%,
-            rgba(0,191,255,.18),
+            ellipse at 25% 55%,
+            rgba(0,191,255,.32),
+            transparent 52%
+        ),
+
+        radial-gradient(
+            ellipse at 75% 45%,
+            rgba(0,119,255,.28),
             transparent 55%
         ),
 
         radial-gradient(
-            ellipse at 70% 45%,
-            rgba(0,119,255,.16),
-            transparent 58%
-        ),
-
-        radial-gradient(
-            ellipse at 50% 80%,
-            rgba(0,191,255,.12),
+            ellipse at 50% 75%,
+            rgba(0,191,255,.24),
             transparent 65%
         );
 
-    filter:blur(25px);
+    filter:blur(22px);
 
-    opacity:.75;
+    opacity:.9;
 
-    z-index:-1;
+    z-index:1;
+
+    pointer-events:none;
 
     animation:neblinaBuho 8s ease-in-out infinite alternate;
 
 }
-
-
 /* ======================================
    IMAGEN DEL SR. BÚHO
 ====================================== */
