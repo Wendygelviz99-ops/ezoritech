@@ -139,6 +139,9 @@ button{
 
     margin-bottom:10px;
 
+   color:white;
+   background:red;
+
 }
 
 #intro p{
@@ -146,6 +149,9 @@ button{
     color:#cfcfcf;
 
     font-size:1.05rem;
+
+   color:yellow;
+background:blue;
 
 }
 
