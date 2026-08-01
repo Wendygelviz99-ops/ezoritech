@@ -639,6 +639,169 @@ button{
 
 }
 /* ======================================
+   BRUMA REAL
+====================================== */
+
+.niebla{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    z-index:2;
+
+    filter:blur(45px);
+
+    opacity:.55;
+
+    mix-blend-mode:screen;
+
+}
+
+.niebla-izquierda{
+
+    width:220px;
+
+    height:340px;
+
+    left:-30px;
+
+    top:120px;
+
+    background:radial-gradient(
+
+        ellipse,
+
+        rgba(0,191,255,.45) 0%,
+
+        rgba(0,191,255,.20) 45%,
+
+        transparent 80%
+
+    );
+
+    animation:nieblaIzquierda 8s ease-in-out infinite;
+
+}
+
+.niebla-derecha{
+
+    width:240px;
+
+    height:360px;
+
+    right:-35px;
+
+    top:90px;
+
+    background:radial-gradient(
+
+        ellipse,
+
+        rgba(0,170,255,.42) 0%,
+
+        rgba(0,170,255,.18) 45%,
+
+        transparent 82%
+
+    );
+
+    animation:nieblaDerecha 9s ease-in-out infinite;
+
+}
+
+@keyframes nieblaIzquierda{
+
+    0%{
+
+        transform:
+
+            translateX(0)
+
+            translateY(0)
+
+            scale(1);
+
+        opacity:.40;
+
+    }
+
+    50%{
+
+        transform:
+
+            translateX(22px)
+
+            translateY(-12px)
+
+            scale(1.15);
+
+        opacity:.72;
+
+    }
+
+    100%{
+
+        transform:
+
+            translateX(0)
+
+            translateY(0)
+
+            scale(1);
+
+        opacity:.40;
+
+    }
+
+}
+
+@keyframes nieblaDerecha{
+
+    0%{
+
+        transform:
+
+            translateX(0)
+
+            translateY(0)
+
+            scale(1);
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        transform:
+
+            translateX(-18px)
+
+            translateY(14px)
+
+            scale(1.12);
+
+        opacity:.68;
+
+    }
+
+    100%{
+
+        transform:
+
+            translateX(0)
+
+            translateY(0)
+
+            scale(1);
+
+        opacity:.35;
+
+    }
+
+}
+/* ======================================
    SERVICIOS
 ====================================== */
 
