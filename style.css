@@ -114,6 +114,8 @@ button{
 
     animation:introRespira 6s ease-in-out infinite;
 
+   position:relative;
+z-index:2;
 }
 
 .intro-logo img{
@@ -152,6 +154,15 @@ button{
 
    color:yellow;
 background:blue;
+
+}
+
+#intro h1,
+#intro p{
+
+    position:relative;
+
+    z-index:5;
 
 }
 
