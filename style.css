@@ -406,7 +406,7 @@ button{
 
     transform:translateX(-50%);
 
-    background:
+    background:red;
 
         radial-gradient(
             ellipse at 12% 58%,
@@ -436,7 +436,7 @@ button{
 
     filter:blur(24px);
 
-    opacity:.85;
+    opacity:1;
 
     z-index:1;
 
