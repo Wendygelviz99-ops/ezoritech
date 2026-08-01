@@ -108,8 +108,7 @@ button{
 
 .intro-logo{
 
-    width:260px;
-
+    width:300px;
     margin-bottom:20px;
 
     animation:introRespira 6s ease-in-out infinite;
@@ -120,7 +119,7 @@ z-index:2;
 
 .intro-logo img{
 
-    width:100px;
+    width:100%;
     height:auto;
 
     display:block;
@@ -141,9 +140,6 @@ z-index:2;
 
     margin-bottom:10px;
 
-   color:white;
-   background:red;
-
 }
 
 #intro p{
@@ -151,9 +147,6 @@ z-index:2;
     color:#cfcfcf;
 
     font-size:1.05rem;
-
-   color:yellow;
-background:blue;
 
 }
 
