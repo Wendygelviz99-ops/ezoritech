@@ -1026,3 +1026,282 @@ a{
     margin:45px auto;
 
 }
+/*======================================================
+    TARJETAS DE FINANCIACIÓN
+======================================================*/
+
+.tarjeta-financiacion{
+
+    position:relative;
+
+    min-height:210px;
+
+    padding:24px 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(30,30,30,.75),
+            rgba(10,10,10,.90)
+        );
+
+    transition:all .35s ease;
+
+}
+
+/*--------------------------
+    ADDI
+--------------------------*/
+
+.tarjeta-financiacion:nth-child(1){
+
+    border:1px solid rgba(0,191,255,.55);
+
+    box-shadow:
+        0 0 15px rgba(0,191,255,.18),
+        inset 0 0 18px rgba(0,191,255,.04);
+
+}
+
+/*--------------------------
+    SISTECRÉDITO
+--------------------------*/
+
+.tarjeta-financiacion:nth-child(2){
+
+    border:1px solid rgba(90,220,100,.55);
+
+    box-shadow:
+        0 0 15px rgba(90,220,100,.18),
+        inset 0 0 18px rgba(90,220,100,.04);
+
+}
+
+/*--------------------------
+    DESTELLO
+--------------------------*/
+
+.tarjeta-financiacion::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(255,255,255,.08),
+            transparent 55%
+        );
+
+    pointer-events:none;
+
+}
+
+/*--------------------------
+    LOGOS
+--------------------------*/
+
+.tarjeta-financiacion img{
+
+    width:120px;
+
+    height:auto;
+
+    margin-bottom:18px;
+
+    object-fit:contain;
+
+}
+
+/*--------------------------
+    TÍTULO
+--------------------------*/
+
+.tarjeta-financiacion h4{
+
+    color:var(--blanco);
+
+    font-size:1.1rem;
+
+    margin-bottom:12px;
+
+}
+
+/*--------------------------
+    TEXTO
+--------------------------*/
+
+.tarjeta-financiacion p{
+
+    color:#dddddd;
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+    max-width:180px;
+
+}
+/*======================================================
+    BOTÓN FINANCIACIÓN
+======================================================*/
+
+.btn-financiacion{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    max-width:520px;
+
+    margin:40px auto 18px;
+
+    padding:16px 28px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFE66D 0%,
+            #FFD54A 45%,
+            #D4AF37 100%
+        );
+
+    color:#111111;
+
+    font-size:1rem;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 0 15px rgba(255,213,74,.35),
+        0 0 35px rgba(255,213,74,.18);
+
+}
+
+/* DESTELLO */
+
+.btn-financiacion::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60%;
+
+    left:-80%;
+
+    width:45%;
+
+    height:220%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.85),
+            transparent
+        );
+
+    transform:rotate(22deg);
+
+    animation:destelloBoton 7s infinite;
+
+}
+
+/* HOVER */
+
+.btn-financiacion:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(255,213,74,.60),
+        0 0 55px rgba(255,213,74,.28);
+
+}
+
+/* TEXTO */
+
+.texto-financiacion{
+
+    text-align:center;
+
+    color:#d8d8d8;
+
+    font-size:.88rem;
+
+    line-height:1.6;
+
+}
+
+/*=========================
+    ANIMACIONES
+=========================*/
+
+@keyframes destelloBoton{
+
+    0%{
+
+        left:-80%;
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    35%{
+
+        left:130%;
+
+        opacity:1;
+
+    }
+
+    36%,
+    100%{
+
+        left:130%;
+
+        opacity:0;
+
+    }
+
+}
