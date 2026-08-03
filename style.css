@@ -132,6 +132,201 @@ section{
         visibility .8s ease;
 
 }
+/*======================================================
+    HERO
+======================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:90px 8%;
+
+    overflow:hidden;
+
+}
+
+.hero .contenedor{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/*--------------------------
+    TEXTO
+--------------------------*/
+
+.hero-texto h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    color:var(--blanco);
+
+}
+
+.hero-texto h1 span{
+
+    color:var(--dorado);
+
+}
+
+.hero-texto ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:35px 0;
+
+}
+
+.hero-texto li{
+
+    margin-bottom:16px;
+
+    font-size:1.1rem;
+
+    color:#ececec;
+
+}
+
+/*--------------------------
+    BOTONES
+--------------------------*/
+
+.hero-botones{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/*--------------------------
+    IMAGEN
+--------------------------*/
+
+.hero-imagen{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-imagen img{
+
+    width:100%;
+
+    max-width:520px;
+
+    display:block;
+
+    animation:introRespira 6s ease-in-out infinite;
+
+}
+/*======================================================
+    BOTONES HERO
+======================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+/* BOTÓN AZUL */
+
+.btn-principal{
+
+    background:transparent;
+
+    color:var(--azul);
+
+    border:2px solid var(--azul);
+
+    box-shadow:
+        0 0 18px rgba(0,191,255,.18);
+
+}
+
+.btn-principal:hover{
+
+    background:rgba(0,191,255,.12);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 28px rgba(0,191,255,.35);
+
+}
+
+/* BOTÓN WHATSAPP */
+
+.btn-whatsapp{
+
+    background:#111;
+
+    color:#fff;
+
+    border:2px solid rgba(255,255,255,.12);
+
+}
+
+.btn-whatsapp:hover{
+
+    border-color:#25D366;
+
+    color:#25D366;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(37,211,102,.25);
+
+}
 
 /*--------------------------
     LOGO
